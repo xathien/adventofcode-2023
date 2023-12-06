@@ -52,10 +52,7 @@ File.readlines('input')
         current_row << (dest_start..dest_end)
         [range.begin..(source_start - 1), (source_end + 1)..range.end]
       }
-      puts "After step: #{prev_row}"
-      puts "After step 2: #{current_row}"
     }
 
 current_row += prev_row
-pp "All: #{current_row}"
 puts "Lowest: #{current_row.min_by(&:begin).begin}"
